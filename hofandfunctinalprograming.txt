@@ -1,0 +1,88 @@
+1.
+const ordered_list=[
+{name:"laptop",price:120000},
+{name:"mobile",price:70000},
+{name:"mobile charger",price:1500},
+{name:"laptop charger",price:10500},
+];
+let sum=0;
+ordered_list.forEach((data)=>{sum+=data.price});
+
+console.log(`the total price is${sum}`);
+
+2.
+function randomNumbergenerator(){
+const randomNumber=Math.floor(Math.random()*100);
+console.log(randomNumber)
+}
+ function printWithInterval(){
+randomNumbergenerator();
+setInterval(randomNumbergenerator,2000);}
+
+printWithInterval();
+
+3.
+let expenses=[
+{amount:100,category:"utilities"}
+{amount:200,category:"groceries"}
+{amount:50,category:"entertainment"}
+
+
+];
+let expenseWithTax=expenses.map((expense)=>{
+let tax=expense.amount*0.1
+return {...expense,tax:tax};
+
+}
+
+4.let groceriesExpenses=expenses.filter((expense)=>expense.category==="groceries");
+
+console.log("groceries expenses:",groceriesExpenses);
+
+5.
+let expenses=[
+{
+amount:100,category:"utilities"}
+{amount:200,category:"groceries"}
+{amount:50,category:"entertainment"
+
+}]
+
+let totalexpenses = expenses.reduce((acc,expense)=>acc+expense.amount,0}
+
+console.log("total expenses:", totalexpenses )
+
+6.
+let expenses=[
+{
+amount:100,category:"utilities"}
+{amount:200,category:"groceries"}
+{amount:50,category:"entertainment"
+
+}]
+
+
+function categorisedExpense(expense)
+{
+if(expense.amount>100){
+return "high expenses"}
+else{return "low expenses"}
+}
+ let categorise=expenses.map((expense)=>categorisedExpense(expense));
+ console.log(categorise)
+
+
+7.
+let originalarray=[2,5,,8,10,3]
+ originalarray.forEach((num,i,arr)=>{arr[i]=num*2;
+})
+
+console.log("doubled numbers",originalarray)
+
+let evennumber=[2,5,8,10,15]
+even=[]
+evennumber.forEach((number)=>{
+if(number%2==0){
+even.push(number)
+}
+console.log(even)
